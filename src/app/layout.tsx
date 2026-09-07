@@ -17,12 +17,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="antialiased h-full bg-gray-50 text-slate-900">
-      <body className={`${inter.className} flex h-full overflow-hidden`}>
-        {/* Sidebar */}
-        <aside className="w-64 flex-shrink-0 border-r border-gray-200 bg-white h-full flex flex-col">
-          <div className="h-16 flex items-center px-6 border-b border-gray-200 font-bold text-lg tracking-tight text-slate-900">
+      <body className={`${inter.className} flex h-[100dvh] overflow-hidden flex-col md:flex-row`}>
+        {/* Mobile Header */}
+        <div className="md:hidden flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-white shrink-0">
+          <Link href="/" className="font-bold text-lg tracking-tight text-slate-900">
             Raz Docs
+          </Link>
+          <div className="flex gap-4 text-sm font-medium text-slate-700">
+            <Link href="/privacy" className="hover:text-slate-900 transition-colors">Privacy</Link>
+            <Link href="/terms" className="hover:text-slate-900 transition-colors">Terms</Link>
           </div>
+        </div>
+
+        {/* Desktop Sidebar */}
+        <aside className="hidden md:flex w-64 flex-shrink-0 border-r border-gray-200 bg-white h-full flex-col">
+          <Link href="/" className="h-16 flex items-center px-6 border-b border-gray-200 font-bold text-lg tracking-tight text-slate-900 hover:bg-slate-50 transition-colors">
+            Raz Docs
+          </Link>
           <nav className="flex-1 overflow-y-auto py-6 px-4 space-y-1">
             <Link href="/" className="flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-slate-400"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
@@ -44,7 +55,7 @@ export default function RootLayout({
 
         {/* Main Content Area */}
         <main className="flex-1 h-full overflow-y-auto bg-white">
-          <div className="max-w-4xl mx-auto py-12 px-8 sm:px-12 lg:px-16">
+          <div className="max-w-4xl mx-auto py-8 px-6 sm:py-12 sm:px-12 lg:px-16">
             {children}
           </div>
         </main>
