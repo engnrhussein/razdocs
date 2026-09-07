@@ -130,9 +130,10 @@ export default function TermsOfService() { return ( <><article className="">
       </article>
 
       {/* Mini Footer */}
-      <footer className="bg-onyx py-8 px-6 border-t border-white/10 text-center text-stark/40 text-xs font-light">
+      <footer className="bg-stark py-8 px-6 border-t border-onyx/10 text-center text-onyx/60 text-xs font-light">
         <p>&copy; {new Date().getFullYear()} RAZ Transportation LLC. All rights reserved.</p>
       </footer></>);}
+
 
 
 
