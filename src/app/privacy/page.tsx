@@ -5,15 +5,8 @@ export const metadata = {
   description: "Comprehensive Privacy Policy and Data Collection Practices for RAZ Transportation LLC.",
 };
 
-export default function PrivacyPolicy() {
-  return (
-    <main className="min-h-screen bg-stark text-onyx font-sans">
-      
-
-      <article className="max-w-4xl mx-auto px-6 pt-32 pb-20 md:pt-40 md:pb-32">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm uppercase tracking-widest text-onyx/60 hover:text-gold-dark transition-colors font-bold mb-12">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg> Back to Home
-        </Link>
+export default function PrivacyPolicy() { return ( <><article className="">
+        
 
         <div className="mb-16">
           <p className="text-gold-dark uppercase tracking-[0.2em] text-sm font-bold mb-4">Legal & Compliance</p>
@@ -164,8 +157,7 @@ export default function PrivacyPolicy() {
       {/* Mini Footer */}
       <footer className="bg-onyx py-8 px-6 border-t border-white/10 text-center text-stark/40 text-xs font-light">
         <p>&copy; {new Date().getFullYear()} RAZ Transportation LLC. All rights reserved.</p>
-      </footer>
-    </main>
-  );
-}
+      </footer></>);}
+
+
 
